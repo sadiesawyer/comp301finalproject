@@ -1,6 +1,9 @@
 # Dungeon Crawler - Part 2
 
 
+**A NOTE ON GETTING STARTED:**  The easiest thing to do to merge your old work with your new is to copy your files into this repo.  This repo has all the necessary dependencies and a "Hello, world" implementation for JavaFX.
+
+
 ## Introduction
 
 Welcome to the last part of the last assignment in COMP301!  Dungeon Crawler - Part 2 will focus on building the controller and user interface in JavaFX.  By the end of these instructions, you will have a fully functional project to show off.
