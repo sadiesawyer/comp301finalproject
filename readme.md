@@ -19,6 +19,7 @@ Part 1 of the assignment is the backend functionality.  Part 2 will focus on bui
 
 ## Novice
 In the starter code you will see a package called `[prefix].model.pieces`  These are the required pieces that we will need to make our game.
+
 ### Piece
 
 Take a look at the `Piece` interface:
@@ -40,6 +41,11 @@ As you can see, these are basic setters and getters of an `Object` in java.  We 
 - `Posn posn`: (Short for "Position") This is a simple x,y ordered pair used to simplify locations.
 
 To get you started, we have given you the `abstract APiece` class that initializes all of these instance variables and implements the required methods from the interface.  Your job is to implement each of the provided children classes to initialize the values of the instance variables without taking them as parameters in the constructor.  _Note: Posn will be initialized to null right now, since it is not yet on the board._
+
+
+[readmePart2.md](../a08-dungeon-solution/readmePart2.md)#### Treasure
+
+The treasure class is the only class that has any additional state information: a value.  Set the value of the treasure to 100 (shiny gold doubloons).  
 
 (You may test your implementations here)
 
@@ -257,7 +263,7 @@ There is an enumerated status at the top that will track whether there is an act
 
 - Surprise surprise, our `ModelImpl` class needs to implement `Model`.
 - You can see 7 getter methods, 2 methods that change the status, and 4 movement methods.  You can intuit that there needs to be instance variables for a `Board`(to handle `getWidth`, `getHeight`, `get`), an `int curScore`, an `int highScore`, an `Status status`, `int level`, and a `List` of `Observers` (for the Subject interface).
-- Write a constructor that takes in an `int width` and `int height`, and creates a new board, and initializes all instance variables to their pregame state.  All ints are 0 ,and the `STATUS` should be `GAME OVER`.
+- Write a constructor that takes in an `int width` and `int height`, and creates a new board, and initializes all instance variables to their pregame state.  All ints are 0 ,and the `STATUS` should be `END_GAME`.
 - Write a second constructor that takes in a Board object, and initializes all instance variables to their pregame state.
 
 #### Getters
