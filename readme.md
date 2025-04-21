@@ -263,7 +263,7 @@ There is an enumerated status at the top that will track whether there is an act
 
 - Surprise surprise, our `ModelImpl` class needs to implement `Model`.
 - You can see 7 getter methods, 2 methods that change the status, and 4 movement methods.  You can intuit that there needs to be instance variables for a `Board`(to handle `getWidth`, `getHeight`, `get`), an `int curScore`, an `int highScore`, an `Status status`, `int level`, and a `List` of `Observers` (for the Subject interface).
-- Write a constructor that takes in an `int width` and `int height`, and creates a new board, and initializes all instance variables to their pregame state.  All ints are 0 ,and the `STATUS` should be `GAME OVER`.
+- Write a constructor that takes in an `int width` and `int height`, and creates a new board, and initializes all instance variables to their pregame state.  All ints are 0 ,and the `STATUS` should be `END_GAME`.
 - Write a second constructor that takes in a Board object, and initializes all instance variables to their pregame state.
 
 #### Getters
