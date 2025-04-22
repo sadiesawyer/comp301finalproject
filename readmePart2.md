@@ -31,9 +31,9 @@ Now that you’ve built a fully functional game backend, it’s time to connect 
 
 The controller’s job is to act as the **bridge between the view and the model**. It exposes a simplified API of user-facing actions, such as “move left” or “start game,” which the view can call directly. It *does not* contain business logic—only delegation. This keeps responsibilities cleanly separated and allows for a more testable and flexible architecture.
 
-You will implement a class called `PlayerController` in the `[prefix].controller` package. This controller will handle user actions and translate them into model updates.
-
 There should be new package in your project called  `controller` at the same level as `model`.
+
+You will implement a class called `ControllerImpl` in the `controller` package. This controller will handle user actions and translate them into model updates.  The file has been given to you as a blanck slate.
 
 The `controller` should have one method for every possible action that a user could take in your game.  In proper MVC architecture, the View can _read_ from the `model` but it cannot *modify* the Model.  That is the job of the controller.  Take a minute to write down all possible actions, your user could take.  At a bare minimum, it should have
 
@@ -49,11 +49,11 @@ Now take a look at the `Controller` interface:
 
 ```java
 public interface Controller {
-    public void moveUp();
-    public void moveDown();
-    public void moveLeft();
-    public void moveRight();
-    public void startGame();
+    void moveUp();
+    void moveDown();
+    void moveLeft();
+    void moveRight();
+    void startGame();
 }
 ```
 
@@ -163,7 +163,7 @@ First things first, set the window title to `"[your name]'s Dungeon Crawler"` us
 Next, set up the architecture by following the following steps: 
 1. Create the `model` by instantiating a `new Model`, providing it with the dimensions of your board. *This object will manage the game state and logic.*
 
-2. Construct the `controller` by passing the model to a `new PlayerController`. _The controller needs access to the model so it can translate user actions into game behavior._
+2. Construct the `controller` by passing the model to a `new ControllerImpl`. _The controller needs access to the model so it can translate user actions into game behavior._
 
 3. Write the `View`'s constructor such that it can take in a reference to the controller and model.  Once you are ready instantiate the `view` in `AppLauncher` using `new View(pc, model)` _The view needs the controller to send input commands, the model to display current state, and the stage and dimensions to build and manage the JavaFX layout._
 
