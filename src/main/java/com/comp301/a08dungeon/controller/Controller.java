@@ -1,13 +1,13 @@
 package com.comp301.a08dungeon.controller;
 
 public interface Controller {
-  public void moveUp();
+  void moveUp();
 
-  public void moveDown();
+  void moveDown();
 
-  public void moveLeft();
+  void moveLeft();
 
-  public void moveRight();
+  void moveRight();
 
-  public void startGame();
+  void startGame();
 }
