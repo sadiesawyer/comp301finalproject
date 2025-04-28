@@ -8,7 +8,7 @@ public class Hero extends APiece implements MovablePiece {
   // The game will end if the hero collides with an enemy.
   // The hero will move to the next level if they collide with the exit.
   public Hero() {
-    super("Hero", "src/main/resources/enemy");
+    super("Hero", "hero.jpg");
   }
 
   // A Hero can make it to the exit, in which case, the Enemy should not be able to perform another

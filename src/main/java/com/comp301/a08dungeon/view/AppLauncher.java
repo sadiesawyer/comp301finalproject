@@ -12,11 +12,13 @@ public class AppLauncher extends Application {
   @Override
   public void start(Stage stage) {
       stage.setTitle("Sadie Sawyer's Dungeon Crawler");
+
       Model model = new ModelImpl(8,8);
       Controller pc = new ControllerImpl(model);
       View view = new View(pc, model);
       model.addObserver(view);
-      Scene scene = new Scene(view.render(), 800,800);
+
+      Scene scene = new Scene(view.render(), 1000,1000);
       scene.getStylesheets().add("dungeon.css");
       stage.setScene(scene);
       stage.show();

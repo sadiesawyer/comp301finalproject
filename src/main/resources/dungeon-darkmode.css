@@ -1,11 +1,11 @@
 .layout {
-    -fx-background-color: red;
+    -fx-background-color: black;
     -fx-text-fill: white;
     -fx-font-family: "Comic Sans MS", "Comic Sans", cursive;
     -fx-alignment: center;
     -fx-spacing: 30px;
     -fx-padding: 50px;
-    -fx-background-image: url("title-background.jpg");
+    -fx-background-image: url("spider-mode.jpg");
 }
 
 .label-title {
@@ -42,10 +42,10 @@
 }
 
 .tile {
-    -fx-background-color: red;
+    -fx-background-color: black;
     -fx-border-style: solid;
     -fx-border-width: 2;
-    -fx-border-color: black;
+    -fx-border-color: white;
     -fx-pref-width: 80;
     -fx-pref-height: 80;
     -fx-alignment: center;
@@ -75,7 +75,5 @@
 .toggle-button:hover {
     -fx-background-color: #ffe6eb;
 }
-
-
 
 

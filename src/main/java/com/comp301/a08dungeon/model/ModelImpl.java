@@ -109,6 +109,7 @@ public class ModelImpl implements Model {
     if (this.curScore > this.highScore) {
       this.highScore = this.curScore;
     }
+    this.level = 0;
     notifyObservers();
   }
 
